@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL: "https://playground-27cac-default-rtdb.firebaseio.com/"
@@ -22,7 +22,10 @@ publishBtn.addEventListener("click", function() {
 
 
 onValue(endorsementsInDB, function(snapshot) {
-    let endorsementArray = Object.values(snapshot.val()) 
+    let endorsementArray = Object.values(snapshot.val())
+
+    clearEndorsementListEl()
+
     for (let i = 0; i < endorsementArray.length; i++) {
         let currentItem = endorsementArray[i]
 
@@ -30,13 +33,17 @@ onValue(endorsementsInDB, function(snapshot) {
     }
 })
 
+function clearEndorsementListEl() {
+    endorsementListEl.innerHTML = ""
+}
+
 function appendItemToendorsementListEl(item) {
-    // let itemID = item[0]
-    // let itemValue = item[1]
+    let itemID = item[0]
+    let itemValue = item[1]
     
     let newEl = document.createElement("li")
     
-    newEl.textContent = item
+    newEl.textContent = itemValue
     
     endorsementListEl.append(newEl)
 }
