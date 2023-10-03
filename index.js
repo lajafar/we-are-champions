@@ -31,12 +31,12 @@ onValue(endorsementsInDB, function(snapshot) {
 })
 
 function appendItemToendorsementListEl(item) {
-    let itemID = item[0]
-    let itemValue = item[1]
+    // let itemID = item[0]
+    // let itemValue = item[1]
     
     let newEl = document.createElement("li")
     
-    newEl.textContent = itemValue
+    newEl.textContent = item
     
     endorsementListEl.append(newEl)
 }
