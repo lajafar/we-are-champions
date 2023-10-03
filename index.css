@@ -1,0 +1,77 @@
+html, body {
+    font-family: 'Josefin Sans','Inter', sans-serif;
+    margin: 50px;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.img {
+    max-height: 90px;
+}
+
+input {
+    border-radius: 8px;
+    background: #444059;
+    min-width: 320px;
+    color: #8F8F8F;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    padding: 12px 19px;
+    min-height: 118px;
+    max-height: fit-content;
+    text-align: justify;
+    vertical-align: text-top;
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    background: #28A9F1;
+    min-width: 320px;
+    height: 60px;
+    color: #04131C;
+    text-align: center;
+    padding: auto;
+    font-family: "Josefin Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    max-width: 700px;
+    margin: auto;
+}
+
+ul {
+    min-width: 320px;
+    max-width: 700px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    background: white;
+    color: #1B1924;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    padding: 13px 15px;
+}
